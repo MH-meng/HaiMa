@@ -1,0 +1,36 @@
+{% extends 'home.html' %}
+
+{% block title %}
+    {% block title1 %}<title>行业资讯</title>
+
+    {% endblock %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/css/profiles.css" type="text/css">
+{% endblock %}
+{% block content %}
+    <div class="pr-header">
+        <img src="/static/image/profiles/belief.jpg" alt="profiles">
+    </div>
+
+    <div class="pr-content">
+        <div class="content-header">
+            <span class="content-header-span1">行业资讯</span>
+            <span class="content-header-span2">INFORMATIONS</span>
+            <span class="content-header-span3">
+                <span>当前位置</span>-->
+                <span class="showinf">新闻中心</span>-->
+                <span class="showinfsen">行业资讯</span>
+            </span>
+        </div>
+        <div class="infor">
+            <iframe src="http://news.chinawutong.com/" width="1100" height="700"></iframe>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block script %}
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'home.html' %}
+
+{% block title %}
+    {% block title1 %}<title>海马新闻</title>
+
+    {% endblock %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/css/price.css" type="text/css">
+    <link rel="stylesheet" href="/static/plug/bootstrap/css/bootstrap.css" type="text/css">
+{% endblock %}
+{% block content %}
+    <div class="pr-header">
+        <img src="/static/image/profiles/server.jpg" alt="server">
+    </div>
+
+    <div class="pr-content">
+        <div class="content-header">
+            <span class="content-header-span1">海马新闻</span>
+            <span class="content-header-span2">HAIMA NEWS</span>
+            <span class="content-header-span3">
+                <span>当前位置</span>-->
+                <span class="showinf">新闻中心</span>-->
+                <span class="showinfsen">海马新闻</span>
+            </span>
+        </div>
+        {#分页#}
+        <div class="content-content">
+            {% for row in dataNews_list %}
+                {% if row.status == '1' %}
+                    <div class="content-content-news">
+                        <div class="newsauthor">
+                            <img src="/static/image/logo.png" alt="" height="35" style="border-radius: 50%;margin-bottom: 5px">
+                            <a href="/news_detail?id={{ row.id }}" style="text-decoration: none;">
+                                <span class="title">{{ row.title }}</span>
+                            </a>
+                        </div>
+                        <div class="contentnews">
+                            <a href="/news_detail?id={{ row.id }}" style="text-decoration: none;">【引言：】{{ row.introduction }}</a>
+                        </div>
+                    <div class="author">
+                        <span>作者：{{ row.author }}</span>&nbsp;
+                        <span>发布日期：{{ row.time|date:'Y-m-d' }}</span>
+                    </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <div class="pr-page">
+                <ul class="pagination pagination-sm">
+                    {{ page_new.page_str | safe }}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block script %}
+{% endblock %}

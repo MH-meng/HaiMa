@@ -1,0 +1,77 @@
+{% extends 'home.html' %}
+
+{% block title %}
+    {% block title1 %}<title>运输价格</title>
+
+    {% endblock %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/css/price.css" type="text/css">
+    <link rel="stylesheet" href="/static/plug/bootstrap/css/bootstrap.css" type="text/css">
+{% endblock %}
+{% block content %}
+    <div class="pr-header">
+        <img src="/static/image/profiles/server.jpg" alt="server">
+    </div>
+
+    <div class="pr-content">
+        <div class="content-header">
+            <span class="content-header-span1">运输价格</span>
+            <span class="content-header-span2">TRANSPORT PRICE</span>
+            <span class="content-header-span3">
+                <span>当前位置</span>-->
+                <span class="showinf">产品服务</span>-->
+                <span class="showinfsen">运输价格</span>
+            </span>
+        </div>
+        {#分页#}
+        <div class="content-content">
+            {% for row in data_list %}
+                {% if row.id %}
+                    <div class="content-content-1">
+                        <p></p>
+                        <table border="1">
+                            <tr>
+                                <td>出发地</td>
+                                <td>目的地</td>
+                                <td>车辆类型</td>
+                                <td>价格</td>
+                                <td style="color: red">状态(1表示上线有货)</td>
+                            </tr>
+                            <tr>
+                                <td>{{ row.departure }}</td>
+                                <td>{{ row.destination }}</td>
+                                <td>{{ row.type }}</td>
+                                <td>{{ row.price }}</td>
+                                <td>{{ row.status }}</td>
+                            </tr>
+                        </table>
+                        <div>
+                            <p>货物介绍：</p>
+                            <div style="padding: 4px;font-size: 14px;margin-bottom: 4px;border-top: 1px solid gray;border-bottom: 1px solid gray;height: 44px;width: 680px">
+                                {{ row.content }}
+                            </div>
+                        </div>
+                        <div>
+                            <span>发布人：{{ row.author }}</span>
+                            <span style="float: right">时间：{{ row.time|date:"Y-m-d" }}</span>
+
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+            <div class="pr-page">
+                <ul class="pagination pagination-sm">
+                    {{ page_obj.page_str | safe }}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block script %}
+{% endblock %}

@@ -1,0 +1,32 @@
+.news_box{
+    width: 780px;
+    height: 100px;
+    margin: 0 auto;
+    border-bottom: 1px solid grey;
+}
+
+.time_ahtuor{
+    width: 700px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.news_title{
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.news_box .pub_time{
+    margin-left: 100px;
+    float: left;
+}
+.news_author{
+    margin-left: 100px;
+}
+.news_content{
+    margin: 30px auto;
+    height: 900px;
+    padding: 2px 5px;
+    overflow: auto;
+}

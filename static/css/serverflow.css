@@ -1,0 +1,27 @@
+.pr-content-server{
+    float: left;
+    height: 700px;
+    width: 800px;
+    margin-top: 120px;
+    margin-left: 150px;
+    box-shadow:  0  0 5px gray;
+}
+
+.pr-content-server-introduce{
+    margin-top: 20px;
+    margin-left: 50px;
+    height: 100px;
+    width: 700px;
+
+}
+.pr-content-server-introduce p{
+    font-size: 20px;
+}
+
+.pr-content-server-img{
+    margin-top: 20px;
+    margin-left: 50px;
+    height: 400px;
+    width: 700px;
+    border:1px solid red;
+}

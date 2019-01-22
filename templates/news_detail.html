@@ -1,0 +1,48 @@
+{% extends 'home.html' %}
+
+{% block title %}
+    {% block title1 %}<title>海马新闻-详情</title>
+
+    {% endblock %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/css/news_detail.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/price.css" type="text/css">
+    <link rel="stylesheet" href="/static/plug/bootstrap/css/bootstrap.css" type="text/css">
+{% endblock %}
+{% block content %}
+    <div class="pr-header">
+        <img src="/static/image/profiles/server.jpg" alt="server">
+    </div>
+
+    <div class="pr-content">
+        <div class="content-header">
+            <span class="content-header-span1">海马新闻</span>
+            <span class="content-header-span2">HAIMA NEWS</span>
+            <span class="content-header-span3">
+                <span>当前位置</span>-->
+                <span class="showinf">海马新闻</span>-->
+                <span class="showinfsen">新闻详情</span>
+            </span>
+        </div>
+        {#分页#}
+        <div class="content-content">
+            {% for row in news_detail %}
+                <div class="news_box">
+                    <h2 class="news_title">{{ row.title }}</h2>
+                    <div class="time_ahtuor">
+                        <span class="pub_time">更新时间：{{ row.time|date:'Y-m-d' }}</span>
+                        <span class="news_author">来源：{{ row.author }}</span>
+                    </div>
+                    <div class="news_content">
+                        {{ row.content|safe }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
+{% block script %}
+{% endblock %}

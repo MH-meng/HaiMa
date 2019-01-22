@@ -1,0 +1,38 @@
+{% extends 'home.html' %}
+
+{% block title %}
+    {% block title1 %}<title>网络配送</title>
+
+    {% endblock %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/css/profiles.css" type="text/css">
+{% endblock %}
+{% block content %}
+    <div class="pr-header">
+        <img src="/static/image/profiles/distribution.jpg" alt="distribution">
+    </div>
+
+    <div class="pr-content">
+        <div class="content-header">
+            <span class="content-header-span1">网络配送</span>
+                <span class="content-header-span2">DISTRIBUTION</span>
+            <span class="content-header-span3">
+                <span>当前位置</span>-->
+                <span class="showinf">产品服务</span>-->
+                <span class="showinfsen">网络配送</span>
+            </span>
+        </div>
+        <div class="distribution">
+{#            <p class="fa fa-hourglass-half" aria-hidden="true"></p>#}
+            <p><img src="/static/image/timg.gif" alt="timg"></p>
+            <p>网络配送服务正在升级优化中，敬请期待</p>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block script %}
+{% endblock %}

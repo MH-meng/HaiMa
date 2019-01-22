@@ -1,0 +1,84 @@
+.span3{
+    display: inline-block;
+    width: 150px;
+    font-size: 15px;
+    margin-left: 100px;
+}
+
+.rel-map{
+    position: absolute;
+    height: 600px;
+    width: 400px;
+    left: 150px;
+    top: 200px;
+    /*border: 2px solid black;*/
+    box-shadow: 0 0 10px black;
+}
+
+/*.pr-content .span{*/
+    /*display: inline-block;*/
+    /*font-size: 25px;*/
+    /*margin-left: 150px;*/
+    /*margin-top: 150px;*/
+/*}*/
+
+.pr-content .pr-content-in{
+    float: right;
+    height: 600px;
+    width: 350px;
+    margin-top: 200px;
+    margin-right: 150px;
+    box-shadow: 0 0 5px gray;
+}
+
+.pr-content .pr-content-in .footer-1 p{
+    display: inline-block;
+    width: 350px;
+    font-size: 18px;
+    padding: 30px 20px;
+}
+
+.pr-content .pr-content-in .footer-1 div{
+    background-color: #5bc0de;
+    font-size: 40px;
+    width: 350px;
+    text-align: center;
+}
+
+.pr-content .pr-content-content1{
+    float: left;
+    height: 700px;
+    width: 800px;
+    margin-top: 120px;
+    margin-left: 150px;
+    box-shadow:  0  0 5px gray;
+}
+
+.pr-content .pr-content-content1 .relationlogo{
+    height: 100px;
+    width: 200px;
+    box-shadow:  0  0 5px gray;
+    float: left;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.pr-content .pr-content-content1 .relationlogo a{
+    display: inline-block;
+    height: 100px;
+    width: 200px;
+}
+.pr-content .pr-content-content1 .relationlogo a:hover{
+    font-size: 70px;
+}
+
+/*百度地图*/
+#dituContent{
+    width:400px;
+    height:600px;
+    border:#ccc solid 1px;
+    float: left;
+    margin-top: 200px;
+    margin-left: 150px;
+    font-size: 30px;
+}

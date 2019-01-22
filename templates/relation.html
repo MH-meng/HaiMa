@@ -1,0 +1,176 @@
+{% extends 'home.html' %}
+
+
+{% block title %}
+    {% block title1 %}<title>联系海马</title>
+
+    {% endblock %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/css/profiles.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/cooperations.css" type="text/css">
+
+{#    引入百度地图API#}
+    <style type="text/css">
+        html,body{margin:0;padding:0;}
+        .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+        .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+
+{% endblock %}
+{% block content %}
+    <div class="pr-header">
+        <img src="/static/image/profiles/relation.jpg" alt="relation">
+    </div>
+
+    <div class="pr-content">
+        <div class="content-header">
+            <span class="content-header-span1">联系海马</span>
+            <span class="content-header-span2">RELATION</span>
+            <span class="span3">
+                <span>当前位置</span>-->
+                <span class="showinf">联系海马</span>
+            </span>
+        </div>
+{#        <div class="rel-map">#}
+{#            <iframe id="mapPage" width="100%" height="100%" frameborder=0#}
+{#                src="http://apis.map.qq.com/tools/locpicker?search=1&type=1&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77&referer=myapp">#}
+{#                src="http://apis.map.qq.com/tools/poimarker?type=1&keyword=产业园&center=31.9223210000,117.2767840000&radius=1000&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77&referer=myapp">#}
+{#                src="http://apis.map.qq.com/tools/routeplan/eword=合肥瑶海区&epointx=31.8579700000&epointy=117.3094900000?referer=myapp&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77">#}
+{#            </iframe>#}
+{##}
+{#        </div>#}
+
+          <!--百度地图容器-->
+        <div  id="dituContent"></div>
+
+        <div class="pr-content-in">
+            <div class="footer-1" style="width: 250px">
+                <div >联系我们</div>
+                <p class="fa fa-map-marker">地址：合肥市庐阳区耀远路工投产业园1号楼8017</p>
+                <p class="fa fa-phone-square">全国服务热线：0551-64522579</p>
+                <p class="fa fa-phone">24小时服务热线：13295516592</p>
+                <p class="fa fa-qq">QQ号：719285175</p>
+                <p class="fa fa-weixin">微信号：13156570388</p>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+
+{% block script %}
+{#    <script>#}
+{#          window.addEventListener('message', function(event) {#}
+{#            // 接收位置信息，用户选择确认位置点后选点组件会触发该事件，回传用户的位置信息#}
+{#            var loc = event.data;#}
+{#            if (loc && loc.module == 'locationPicker') {//防止其他应用也会向该页面post信息，需判断module是否为'locationPicker'#}
+{#              console.log('location', loc);#}
+{#            }#}
+{#        }, false);#}
+{#    </script>#}
+{#    #}
+
+
+{#    百度地图#}
+    <script type="text/javascript">
+        //创建和初始化地图函数：
+        function initMap(){
+            createMap();//创建地图
+            setMapEvent();//设置地图事件
+            addMapControl();//向地图添加控件
+            addMarker();//向地图中添加marker
+        }
+
+        //创建地图函数：
+        function createMap(){
+            var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+            var point = new BMap.Point(117.282008,31.927818);//定义一个中心点坐标
+            map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+            window.map = map;//将map变量存储在全局
+        }
+
+        //地图事件设置函数：
+        function setMapEvent(){
+            map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+            map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+            map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+            map.enableKeyboard();//启用键盘上下左右键移动地图
+        }
+
+        //地图控件添加函数：
+        function addMapControl(){
+            //向地图中添加缩放控件
+        var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+        map.addControl(ctrl_nav);
+            //向地图中添加缩略图控件
+        var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+        map.addControl(ctrl_ove);
+            //向地图中添加比例尺控件
+        var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+        map.addControl(ctrl_sca);
+        }
+
+        //标注点数组
+         var markerArr = [{title:"海马运输有限公司",content:"我的备注",point:"117.281478|31.928737",isOpen:0,icon:{w:23,h:25,l:69,t:21,x:9,lb:12}}
+          ];
+        //创建marker
+        function addMarker(){
+            for(var i=0;i<markerArr.length;i++){
+                var json = markerArr[i];
+                var p0 = json.point.split("|")[0];
+                var p1 = json.point.split("|")[1];
+                var point = new BMap.Point(p0,p1);
+                var iconImg = createIcon(json.icon);
+                var marker = new BMap.Marker(point,{icon:iconImg});
+                var iw = createInfoWindow(i);
+                var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                marker.setLabel(label);
+                map.addOverlay(marker);
+                label.setStyle({
+                            borderColor:"#808080",
+                            color:"#333",
+                            cursor:"pointer"
+                });
+
+                (function(){
+                    var index = i;
+                    var _iw = createInfoWindow(i);
+                    var _marker = marker;
+                    _marker.addEventListener("click",function(){
+                        this.openInfoWindow(_iw);
+                    });
+                    _iw.addEventListener("open",function(){
+                        _marker.getLabel().hide();
+                    })
+                    _iw.addEventListener("close",function(){
+                        _marker.getLabel().show();
+                    })
+                    label.addEventListener("click",function(){
+                        _marker.openInfoWindow(_iw);
+                    })
+                    if(!!json.isOpen){
+                        label.hide();
+                        _marker.openInfoWindow(_iw);
+                    }
+                })()
+            }
+        }
+        //创建InfoWindow
+        function createInfoWindow(i){
+            var json = markerArr[i];
+            var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+            return iw;
+        }
+        //创建一个Icon
+        function createIcon(json){
+            var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+            return icon;
+        }
+
+        initMap();//创建和初始化地图
+    </script>
+{% endblock %}

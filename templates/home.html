@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+        {% block title404 %}
+
+            <title>合肥海马运输有限公司</title>
+        {% endblock %}
+    {% endblock %}
+    <link rel="icon" href="/static/image/ico.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/static/css/home.css" type="text/css">
+    <link rel="stylesheet" href="/static/plug/bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="/static/plug/font-awesome/css/font-awesome.css" type="text/css">
+
+    {% block css %}{% endblock %}
+</head>
+<body>
+<div class="box">
+    {% block content404 %}
+        {#头#}
+        <div class="header">
+            <div class="headerlogo"><a href="/relation.html"><img src="/static/image/logo.jpg" alt=""></a></div>
+            {#        <div class="xin"><img src="/static/image/xinnian.png" alt=""></div>#}
+            <div class="header-phone">
+                <div class="phone"><span class="fa fa-phone-square" aria-hidden="true">全国服务电话：</span></div>
+                <div class="phone" style="font-size: 24px">0551-64522579</div>
+            </div>
+        </div>
+
+        {#    导航条#}
+        <div class="pg-navigation">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="/">首页<span class="sr-only">(current)</span></a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">走进海马 <span class="caret"></span></a>
+                                <ul class="dropdown-menu menu">
+                                    <li><a href="/profiles.html">企业简介</a></li>
+                                    <li><a href="/culture.html">企业文化</a></li>
+                                    <li><a href="#">海马运输</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">产品服务 <span class="caret"></span></a>
+                                <ul class="dropdown-menu menu">
+                                    <li><a href="/price.html">运输价格</a></li>
+                                    <li><a href="/serverflow.html">服务流程</a></li>
+                                    <li><a href="/carriage.html">道路普通货物运输</a></li>
+                                    <li><a href="/maritime.html">航空运输</a></li>
+                                    <li><a href="/timereach.html">定时运达</a></li>
+                                    <li><a href="/warehouse.html">仓库物流</a></li>
+                                    <li><a href="/packaging.html">包装服务</a></li>
+                                    <li><a href="/distribution.html">网络配送</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">新闻中心 <span class="caret"></span></a>
+                                <ul class="dropdown-menu menu">
+                                    <li><a href="/news.html">海马新闻</a></li>
+                                    <li><a href="/information.html">行业资讯</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="/cooperations.html">合作伙伴<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="dropdown"><a href="/relation.html">联系海马<span class="sr-only">(current)</span></a>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+
+        {% block content %}
+            {#轮播图#}
+            <div style="width: 1350px;" id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="/static/image/wu/wu1.jpg" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/static/image/wu/wu2.jpg" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/static/image/wu/wu3.jpg" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <div class="pa-advantage">
+                <div class="advantage">
+                    <span class="fa fa-clock-o"></span>
+                    <i>十年物流</i>
+                </div>
+                <div class="advantage">
+                    <span class="fa fa-thumbs-up"></span>
+                    <i>覆盖范围</i>
+                </div>
+                <div class="advantage">
+                    <span class="fa fa-archive"></span>
+                    <i>运输物品</i>
+                </div>
+                <div class="advantage advantage1">
+                    <span class="fa fa-user-plus"></span>
+                    <i>货车团队</i>
+                </div>
+            </div>
+
+            {#服务#}
+            <div class="pa-server">
+                <div class="pa-server1">
+                    ==========<span style="color: rgb(6,158,101);font-size: 40px">服务项目</span> SERVICE CONTENT==========
+                </div>
+                <div class="pa-server2">
+                    <div class="pa-server2-1">
+                        <a href="/timereach.html">
+                            <span class="fa fa-telegram pa-server2-logo"></span>
+                            <span class="pa-server2-span">定日达</span>
+                        </a>
+                    </div>
+                    <div class="pa-server2-1">
+                        <a href="/serverflow.html">
+                            <span class="fa fa-cubes pa-server2-logo"></span>
+                            <span class="pa-server2-span">经济快运</span>
+                        </a>
+                    </div>
+                    <div class="pa-server2-1">
+                        <a href="/carriage.html">
+                            <span class="fa fa-truck pa-server2-logo"></span>
+                            <span class="pa-server2-span">陆路运输</span>
+                        </a>
+                    </div>
+                    <div class="pa-server2-1">
+                        <a href="/maritime.html">
+                            <span class="fa fa-plane pa-server2-logo"></span>
+                            <span class="pa-server2-span">航空货运</span>
+                        </a>
+                    </div>
+                    <div class="pa-server2-1">
+                        <a href="/price.html">
+                            <span class="fa fa-money pa-server2-logo"></span>
+                            <span class="pa-server2-span">价格查询</span>
+                        </a>
+                    </div>
+                    <div class="pa-server2-1">
+                        <a href="/packaging.html">
+                            <span class="fa fa-gift pa-server2-logo"></span>
+                            <span class="pa-server2-span">包装服务</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div><img src="/static/image/content.jpg" alt=""></div>
+
+            <div class="pa-server">
+                <div class="pa-server1">
+                    ==========<span style="color: rgb(6,158,101);font-size: 40px">车队展示</span> PRODUCTS==========
+                </div>
+                <div class="cars-show">
+                    <div class="car">
+                        <div id="carousel-example-generic" class="carousel car-slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                {#                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>#}
+                                {#                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>#}
+                                {#                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>#}
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="/static/image/cars/1.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="/static/image/cars/2.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="/static/image/cars/3.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="/static/image/cars/10.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" role="button"
+                               data-slide="prev">
+                                {#                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>#}
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" role="button"
+                               data-slide="next">
+                                {#                    <span class="glyphicon glyphicon-chevron-right          aria-hidden="true"></span>#}
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="car">
+                        <div id="carousel-example-generic" class="carousel car-slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                {#                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>#}
+                                {#                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>#}
+                                {#                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>#}
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="/static/image/cars/4.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="/static/image/cars/5.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="/static/image/cars/6.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="/static/image/cars/11.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" role="button"
+                               data-slide="prev">
+                                {#                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>#}
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" role="button"
+                               data-slide="next">
+                                {#                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>#}
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="car">
+                        <div id="carousel-example-generic" class="carousel car-slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                {#                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>#}
+                                {#                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>#}
+                                {#                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>#}
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="/static/image/cars/7.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="/static/image/cars/8.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="/static/image/cars/9.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="/static/image/cars/12.jpg" alt="...">
+                                    <div class="carousel-caption">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" role="button"
+                               data-slide="prev">
+                                {#                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>#}
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" role="button"
+                               data-slide="next">
+                                {#                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>#}
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        {% endblock %}
+        <div class="pa-call">
+            <div class="pa-call-1">
+                <div class="fa fa-phone"></div>
+                <div class="call-phone">24小时热线：13295516592</div>
+            </div>
+            <div style="width: 24px;height: 20px;float: left"></div>
+            <div class="pa-call-1">
+                <div class="fa fa-qq"></div>
+                <div class="call-phone">QQ随时交流：719285175</div>
+            </div>
+            <div style="width: 24px;height: 20px;float: left"></div>
+            <div class="pa-call-1">
+                <div class="fa fa-weixin"></div>
+                <div class="call-phone">微信聊不停：13156570388</div>
+            </div>
+            <div style="width: 24px;height: 20px;float: left"></div>
+            <div class="pa-call-1">
+                <div class="fa fa-folder-open-o"></div>
+                <div class="call-phone">快速下单通道：自助下单更健康</div>
+            </div>
+            <div style="width: 24px;height: 20px;float: left"></div>
+            <div class="pa-call-1">
+                <div class="fa fa-calendar"></div>
+                <div class="call-phone">海马无假期：节假日正常服务</div>
+            </div>
+        </div>
+        {#尾部#}
+        <div class="pg-footer">
+            <div class="footer-1" style="width: 250px">
+                <p>联系信息：</p>
+                <p class="fa fa-map-marker">地址：合肥市庐阳区耀远路工投产业园1号楼8017</p>
+                <p class="fa fa-phone-square">全国服务热线：0551-64522579</p>
+                <p class="fa fa-phone">24小时服务热线：13295516592</p>
+                <p class="fa fa-qq">QQ号：719285175</p>
+                <p class="fa fa-weixin">微信号：13156570388</p>
+            </div>
+            <div class="footer-1">
+                <p>业务范围:</p>
+                <p><a href="">一：承包全国各地长短途整车、零担运输业务（各种大小吨位车辆齐全）</a></p>
+                <p><a href="">二、办理货物配载、吊车业务</a></p>
+                <p><a href="">三、大件运输、水路运输</a></p>
+            </div>
+            <div class="footer-1 scan">
+                <p>QQ扫描：</p>
+                <p><img src="/static/image/qq.jpg" alt=""></p>
+            </div>
+            <div class="footer-1 scan">
+                <p>微信扫描：</p>
+                <p><img src="/static/image/weixin.jpg" alt=""></p>
+            </div>
+        </div>
+</div>
+
+        <script src="/static/plug/jquery-3.1.1.js"></script>
+        <script src="/static/plug/bootstrap/js/bootstrap.js"></script>
+        {% block script %}{% endblock %}
+
+    {% endblock %}
+
+</body>
+</html>

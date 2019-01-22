@@ -1,0 +1,33 @@
+.pr-content .cul-culture{
+    float: left;
+    height: 852px;
+    width: 800px;
+    margin-left: 150px;
+    margin-top: 30px;
+    padding: 100px 30px;
+}
+.pr-content .cul-culture .cul-culture-1{
+    height: 180px;
+    width: 350px;
+    float: left;
+}
+
+.pr-content .cul-culture .cul-culture-2{
+    height: 180px;
+    width: 600px;
+    float: left;
+    margin-top: 20px;
+}
+.culture1{
+    font-size: 30px;
+    color: #5bc0de;
+}
+.culture2{
+    font-size: 15px;
+    color: gray;
+}
+
+.culture3{
+    font-size: 20px;
+    /*color: gray;*/
+}

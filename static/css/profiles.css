@@ -1,0 +1,163 @@
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.pr-header{
+    position: relative;
+    margin-top: -20px;
+    border: 1px solid red;
+    height: 400px;
+    width: 100%;
+    z-index: 6;
+}
+
+.pr-content{
+    position: relative;
+    margin-left: 120px;
+    margin-top: -70px;
+    box-shadow: 0 0 10px gray;
+    height: 900px;
+    width: 1100px;
+    z-index: 10;
+    background-color: white;
+}
+
+.pr-content .content-header{
+    position: absolute;
+    top: 30px;
+    left: 150px;
+    height: 80px;
+    width: 800px;
+    border-bottom: 3px solid gray;
+}
+
+.pr-content .content-header .content-header-span1{
+    font-size: 50px;
+    border-bottom: 3px solid red;
+    padding: 10px 10px;
+}
+.pr-content .content-header .content-header-span2{
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.pr-content .content-header .content-header-span3{
+    /*border: 1px solid red;*/
+    display: inline-block;
+    width: 230px;
+    font-size: 15px;
+    margin-left: 80px;
+}
+
+.pr-content .pr-content-content{
+    float: left;
+    height: 700px;
+    width: 450px;
+    margin-top: 150px;
+    margin-left: 150px;
+    box-shadow: 0 0 5px gray;
+}
+
+.pr-content .pr-content-content p{
+    font-size: 20px;
+    padding: 10px;
+    text-indent: 2em;
+}
+
+.pr-content .pr-content-infe{
+    float: right;
+    height: 700px;
+    width: 300px;
+    margin-top: 150px;
+    margin-right: 150px;
+    box-shadow: 0 0 5px gray;
+}
+
+.pr-content .pr-content-infe .pr-content-infe1{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 100px;
+    background-color: gainsboro;
+    box-shadow: 0 0 10px gray;
+}
+
+.pr-content .pr-content-infe .pr-content-infe2 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: #5bc0de;
+}
+
+.pr-content .pr-content-infe .pr-content-infe3{
+    margin-left: 50px;
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+
+}
+
+.pr-content .pr-content-infe .pr-content-infe4 span{
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 15px;
+    width: 200px;
+}
+
+
+
+.infor {
+    width: 1100px;
+    height: 700px;
+    margin-top: 120px;
+    float: left;
+}
+
+.distribution{
+    width: 800px;
+    height: 700px;
+    margin-top: 150px;
+    margin-left: 150px;
+    float: left;
+    box-shadow:  0 0 5px gray;
+    text-align: center;
+}
+
+.distribution p{
+    font-size: 40px;
+    margin-top: 50px;
+    color: red;
+}
+
+
+.timerach{
+    width: 800px;
+    height: 700px;
+    margin-top: 150px;
+    margin-left: 150px;
+    float: left;
+    box-shadow:  0 0 5px gray;
+}
+
+.carriage{
+    width: 800px;
+    height: 700px;
+    margin-top: 150px;
+    margin-left: 150px;
+    float: left;
+    box-shadow:  0 0 5px gray;
+    padding-left: 20px;
+}
+
+.carriage p{
+    font-size: 18px;
+    padding-top: 30px;
+}
+
+.page div{
+    float: left;
+    padding: 50px 27px;
+    box-shadow: 0 0 5px gray;
+}
