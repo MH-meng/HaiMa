@@ -37,8 +37,8 @@
 {#        <div class="rel-map">#}
 {#            <iframe id="mapPage" width="100%" height="100%" frameborder=0#}
 {#                src="http://apis.map.qq.com/tools/locpicker?search=1&type=1&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77&referer=myapp">#}
-{#                src="http://apis.map.qq.com/tools/poimarker?type=1&keyword=产业园&center=31.9223210000,117.2767840000&radius=1000&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77&referer=myapp">#}
-{#                src="http://apis.map.qq.com/tools/routeplan/eword=合肥瑶海区&epointx=31.8579700000&epointy=117.3094900000?referer=myapp&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77">#}
+{#                src="http://apis.map.qq.com/tools/poimarker?type=1&keyword=产业园&center=31.8757666564,117.3114418353&radius=1000&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77&referer=myapp">#}
+{#                src="http://apis.map.qq.com/tools/routeplan/eword=合肥瑶海区&epointx=31.8757666564&epointy=117.3114418353?referer=myapp&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77">#}
 {#            </iframe>#}
 {##}
 {#        </div>#}
@@ -49,7 +49,7 @@
         <div class="pr-content-in">
             <div class="footer-1" style="width: 250px">
                 <div >联系我们</div>
-                <p class="fa fa-map-marker">地址：合肥市庐阳区耀远路工投产业园1号楼8017</p>
+                <p class="fa fa-map-marker">地址：合肥市瑶海区明光路与胜利路交叉口西北角、恒大中央广场41栋楼商业4楼421、422、423、室</p>
                 <p class="fa fa-phone-square">全国服务热线：0551-64522579</p>
                 <p class="fa fa-phone">24小时服务热线：13295516592</p>
                 <p class="fa fa-qq">QQ号：719285175</p>
@@ -88,7 +88,7 @@
         //创建地图函数：
         function createMap(){
             var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-            var point = new BMap.Point(117.282008,31.927818);//定义一个中心点坐标
+            var point = new BMap.Point(117.304128,31.882473);//定义一个中心点坐标
             map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
             window.map = map;//将map变量存储在全局
         }
@@ -115,7 +115,7 @@
         }
 
         //标注点数组
-         var markerArr = [{title:"海马运输有限公司",content:"我的备注",point:"117.281478|31.928737",isOpen:0,icon:{w:23,h:25,l:69,t:21,x:9,lb:12}}
+         var markerArr = [{title:"合肥海马运输有限公司",content:"我的备注",point:"117.304128|31.882473",isOpen:0,icon:{w:23,h:25,l:69,t:21,x:9,lb:12}}
           ];
         //创建marker
         function addMarker(){
@@ -167,7 +167,7 @@
         }
         //创建一个Icon
         function createIcon(json){
-            var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+            var icon = new BMap.Icon("http://www.hfhaima.cn/static/image/ico.ico", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
             return icon;
         }
 
