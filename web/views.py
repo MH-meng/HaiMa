@@ -5,9 +5,10 @@ from web import models
 # 分页
 from web.pager import Pagination, PaginationNew
 
+from web.tests import change_info
 def home(request):
-    return render(request,'home.html')
-
+    change_info(request)
+    return render(request, 'home.html')
 
 def profiles(request):
     return render(request,'profiles.html')
@@ -19,7 +20,6 @@ def culture(request):
 
 def cooperations(request):
     return render(request, 'cooperations.html')
-
 
 def relation(request):
     return render(request, 'relation.html')
